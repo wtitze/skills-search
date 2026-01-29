@@ -1,0 +1,6 @@
+JOHN SMITH - Fullstack Developer
+Sede: New York
+Competenze Core: React, Go, GraphQL, AWS Lambda.
+Esperienza: Sviluppo di piattaforme e-commerce globali.
+Corsi Recenti: Serverless Architectures (2024).
+Lingue: Inglese (Madrelingua).

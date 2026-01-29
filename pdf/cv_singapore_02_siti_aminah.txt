@@ -1,0 +1,6 @@
+SITI AMINAH - Python Backend Developer
+Sede: Singapore
+Competenze Core: Python, Django, FastAPI, MongoDB.
+Esperienza: Sviluppo di API RESTful e integrazione sistemi AI.
+Corsi Recenti: Machine Learning Engineering (2023).
+Lingue: Malese, Inglese (C1).

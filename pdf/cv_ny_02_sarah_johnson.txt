@@ -1,0 +1,6 @@
+SARAH JOHNSON - Java Backend Expert
+Sede: New York
+Competenze Core: Java 17, Spring Boot, Hibernate, Kafka, SQL Server.
+Esperienza: Backend bancario e sistemi di messaggistica asincrona.
+Corsi Recenti: Microservices with Spring Cloud (2023).
+Lingue: Inglese (Madrelingua), Spagnolo (B1).

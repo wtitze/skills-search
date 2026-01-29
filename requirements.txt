@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-qdrant
+langchain-huggingface
+langchain-ollama
+sentence-transformers
+qdrant-client
+psycopg2-binary
+redis
+streamlit

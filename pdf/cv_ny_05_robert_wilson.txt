@@ -1,0 +1,6 @@
+ROBERT WILSON - Cloud Security & PenTest
+Sede: New York
+Competenze Core: Azure Security, DevSecOps, Docker Security, Python for Security.
+Esperienza: Protezione di pipeline CI/CD e audit cloud.
+Certificazioni: Azure Security Engineer Associate (2023).
+Lingue: Inglese (Madrelingua).

@@ -1,0 +1,18 @@
+# Database data (Docker volumes)
+postgres_data/
+qdrant_data/
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+venv/
+
+# Streamlit
+.streamlit/
+
+# Modelli IA locali (se scaricati nella cartella di progetto)
+*.bin
+*.onnx
