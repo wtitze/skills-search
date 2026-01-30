@@ -1,0 +1,21 @@
+﻿# Python
+venv/
+__pycache__/
+*.pyc
+
+# Database e dati persistenti
+postgres_data/
+qdrant_data/
+data/
+
+# File caricati a runtime
+uploads/
+
+# Ambiente
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
