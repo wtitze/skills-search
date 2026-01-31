@@ -1,0 +1,9 @@
+TITOLO: Implementazione di Algoritmi Quantum-Resistant in Ambienti WebAssembly
+AUTORE: Marco Rossi
+DATA: Gennaio 2024
+ARGOMENTO: Post-Quantum Cryptography (PQC)
+
+SINTESI:
+In vista della futura minaccia rappresentata dal calcolo quantistico (Shor's Algorithm), ho condotto una ricerca sull'integrazione degli standard NIST (Kyber e Dilithium) all'interno di applicazioni Next.js.
+Utilizzando WebAssembly (WASM), sono riuscito a implementare una libreria di crittografia post-quantistica che permette di gestire scambi di chiavi sicuri direttamente nel browser, garantendo che le comunicazioni rimangano protette anche contro futuri attacchi da parte di computer quantistici.
+Questa competenza permette alla nostra società di offrire consulenze di altissimo livello per infrastrutture governative e bancarie che richiedono sicurezza a lungo termine (LTS).

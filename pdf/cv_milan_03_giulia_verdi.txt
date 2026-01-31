@@ -1,0 +1,6 @@
+GIULIA VERDI - Android Developer
+Sede: Milano
+Competenze Core: Kotlin, Android Jetpack, Coroutines, Dagger Hilt.
+Esperienza: Sviluppo di applicazioni mobile native ad alte prestazioni.
+Corsi Recenti: Jetpack Compose Advanced (2023).
+Lingue: Italiano, Inglese (C1).

@@ -1,0 +1,6 @@
+CHEN WEI - Frontend Specialist
+Sede: Singapore
+Competenze Core: Angular, RxJS, State Management, SASS.
+Esperienza: Esperto in dashboard aziendali complesse.
+Corsi Recenti: UX for Enterprise Applications (2024).
+Lingue: Cinese (Madrelingua), Inglese (Fluente).

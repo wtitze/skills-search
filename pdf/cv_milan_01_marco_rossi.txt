@@ -1,0 +1,6 @@
+MARCO ROSSI - Senior Frontend Developer
+Sede: Milano
+Competenze Core: React, Vue.js, TypeScript, Tailwind CSS.
+Esperienza: 8 anni nello sviluppo di interfacce web responsive.
+Corsi Recenti: Advanced Next.js Patterns (2023), Web Performance Optimization.
+Lingue: Italiano (Madrelingua), Inglese (C1).

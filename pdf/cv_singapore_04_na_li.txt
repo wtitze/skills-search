@@ -1,0 +1,6 @@
+LI NA - Senior iOS Engineer
+Sede: Singapore
+Competenze Core: Swift, Swift Package Manager, Unit Testing (XCTest).
+Esperienza: Sviluppo di applicazioni bancarie sicure.
+Corsi Recenti: Swift Concurrency Deep Dive (2023).
+Lingue: Cinese, Inglese (C1).

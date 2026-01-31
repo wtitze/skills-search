@@ -1,0 +1,6 @@
+SOFIA RUSSO - Penetration Tester
+Sede: Milano
+Competenze Core: Kali Linux, Metasploit, OWASP Top 10, Burp Suite.
+Esperienza: Sicurezza delle applicazioni web e network auditing.
+Certificazioni: OSCP (2023), CEH.
+Lingue: Italiano, Inglese (C1).

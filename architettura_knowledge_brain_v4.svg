@@ -1,0 +1,114 @@
+<svg width="1000" height="1250" viewBox="0 0 1000 1250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sfondo -->
+  <rect width="1000" height="1250" rx="20" fill="#fcfdfe"/>
+  
+  <!-- TITOLO -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">ARCHITETTURA AGENTICA "KNOWLEDGE BRAIN" v4.0 (Enterprise Tier)</text>
+  <text x="500" y="65" font-family="Arial, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Integrazione Chip Huyen (AI Eng) + Cap. 6 (Agents) | SQL + Vector + Redis</text>
+  <line x1="150" y1="80" x2="850" y2="80" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- LIVELLO 1: ACCESSO E AUTH (Interfaccia) -->
+  <rect x="150" y="110" width="700" height="130" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="145" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e40af" text-anchor="middle">1. LAYER ACCESSO &amp; SESSIONE (Login UI)</text>
+  <text x="500" y="170" font-family="Arial, sans-serif" font-size="12" fill="#334155" text-anchor="middle">Gestione Utenti Loggati e Upload Incrementale</text>
+  <!-- Redis Integration Icon inside L1 -->
+  <rect x="740" y="125" width="100" height="40" rx="5" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="790" y="150" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="middle">REDIS: Sessions</text>
+
+  <!-- Frecce 1-2 -->
+  <path d="M480 240 V290" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M520 290 V240" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- LIVELLO 2: AGENTE INTELLIGENTE (Reasoning) -->
+  <rect x="150" y="290" width="700" height="150" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e40af" text-anchor="middle">2. AGENTE IA (Planner &amp; Evaluator)</text>
+  <text x="500" y="350" font-family="Arial, sans-serif" font-size="12" fill="#334155" text-anchor="middle">Ciclo di Reflection: Valutazione qualità e correzione dei task</text>
+  <!-- Redis Integration Icon inside L2 -->
+  <rect x="740" y="305" width="100" height="40" rx="5" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="790" y="330" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#991b1b" text-anchor="middle">REDIS: Chat History</text>
+  
+  <!-- Reflection Loop -->
+  <path d="M170 350 C130 350 130 400 170 400" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="4 4" marker-end="url(#arrow-orange)"/>
+  <text x="135" y="380" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#9a3412" transform="rotate(-90, 135, 380)">REFLECTION</text>
+
+  <!-- Frecce 2-3 -->
+  <path d="M480 440 V490" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M520 490 V440" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- LIVELLO 3: TOOL INVENTORY (Orchestration) -->
+  <rect x="150" y="490" width="700" height="150" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="525" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e40af" text-anchor="middle">3. TOOL INVENTORY (Strumenti di Esecuzione)</text>
+  
+  <rect x="180" y="550" width="220" height="70" rx="8" fill="white" stroke="#3b82f6"/>
+  <text x="290" y="580" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">SQL EXECUTOR</text>
+  <text x="290" y="600" font-family="Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Filtri certi, Sedi, Dipendenti</text>
+
+  <rect x="420" y="550" width="160" height="70" rx="8" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="500" y="580" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b" text-anchor="middle">CACHE TOOL</text>
+  <text x="500" y="600" font-family="Arial, sans-serif" font-size="10" fill="#991b1b" text-anchor="middle">Redis Semantic Cache</text>
+
+  <rect x="600" y="550" width="220" height="70" rx="8" fill="white" stroke="#3b82f6"/>
+  <text x="710" y="580" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">VECTOR RETRIEVER</text>
+  <text x="710" y="600" font-family="Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Ricerca competenze semantiche</text>
+
+  <!-- Frecce 3-4 -->
+  <path d="M480 640 V690" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M520 690 V640" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- LIVELLO 4: STORAGE TIER (Data Stack) -->
+  <rect x="150" y="690" width="700" height="180" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="725" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1e40af" text-anchor="middle">4. DATA STACK (Memoria Ibrida a 3 Livelli)</text>
+  
+  <!-- SQL -->
+  <rect x="180" y="750" width="210" height="90" rx="8" fill="#1e3a8a"/>
+  <text x="285" y="790" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">SQL (Permanente)</text>
+  <text x="285" y="810" font-family="Arial, sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">Identità e Metadati</text>
+
+  <!-- REDIS -->
+  <rect x="410" y="750" width="180" height="90" rx="8" fill="#ef4444"/>
+  <text x="500" y="790" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">REDIS (Volatile)</text>
+  <text x="500" y="810" font-family="Arial, sans-serif" font-size="10" fill="#fecaca" text-anchor="middle">Velocità e Contesto</text>
+
+  <!-- VECTOR -->
+  <rect x="610" y="750" width="210" height="90" rx="8" fill="#1d4ed8"/>
+  <text x="715" y="790" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">VECTOR (Semantico)</text>
+  <text x="715" y="810" font-family="Arial, sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">Intelligenza e Skill</text>
+
+  <!-- AREA LEGENDA REQUISITI -->
+  <rect x="50" y="900" width="900" height="310" rx="15" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="500" y="930" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">MEMORIA TRIPARTITA E RUOLO DI REDIS</text>
+  
+  <g font-family="Arial, sans-serif" font-size="12" fill="#334155">
+    <text x="80" y="970" font-weight="bold" fill="#ef4444">1. Redis per la Sessione (Layer 1):</text>
+    <text x="320" y="970">Mantiene il login attivo. Evita di interrogare SQL per ogni azione dell'utente.</text>
+    
+    <text x="80" y="1005" font-weight="bold" fill="#ef4444">2. Redis per la Cronologia (Layer 2):</text>
+    <text x="320" y="1005">Gestisce la memoria a breve termine dell'Agente. Permette dialoghi coerenti ("Chi è?" -> "E dove vive?").</text>
+    
+    <text x="80" y="1040" font-weight="bold" fill="#ef4444">3. Redis per la Cache (Layer 3):</text>
+    <text x="320" y="1040">Memorizza risposte a domande frequenti. Riduce drasticamente i costi di calcolo LLM e la latenza.</text>
+    
+    <text x="80" y="1075" font-weight="bold" fill="#1e40af">Database SQL (Layer 4):</text>
+    <text x="320" y="1075">Garante dell'integrità. Associa ogni documento all'ID dell'utente loggato (user_id).</text>
+
+    <text x="80" y="1110" font-weight="bold" fill="#1d4ed8">Vector DB (Layer 4):</text>
+    <text x="320" y="1110">Contiene la conoscenza grezza trasformata in vettori. È il database interrogato dal Retriever.</text>
+    
+    <line x1="80" y1="1145" x2="920" y2="1145" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="80" y="1175" font-style="italic" fill="#64748b">Frecce BLU: Flusso Comandi / Input  |  Frecce VERDI: Flusso Risultati / Output  |  Arancione: Ciclo di Ragionamento</text>
+    <text x="80" y="1195" font-style="italic" fill="#64748b">Infrastruttura: On-Premise (Server Interno) per la totale riservatezza dei dati di ricerca.</text>
+  </g>
+
+  <!-- Definizioni Frecce -->
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+</svg>

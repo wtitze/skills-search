@@ -1,0 +1,6 @@
+LUCA BIANCHI - Backend Engineer
+Sede: Milano
+Competenze Core: Node.js, PostgreSQL, Redis, Docker, Microservizi.
+Esperienza: Specializzato in architetture scalabili e gestione database relazionali.
+Corsi Recenti: Kubernetes for Developers (2024), Distributed Systems Design.
+Lingue: Italiano, Inglese (B2).

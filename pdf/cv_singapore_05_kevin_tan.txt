@@ -1,0 +1,6 @@
+KEVIN TAN - Cybersecurity Analyst
+Sede: Singapore
+Competenze Core: Wireshark, SIEM, Cloud Security (AWS), Incident Response.
+Esperienza: Monitoraggio infrastrutture critiche e difesa perimetrale.
+Certificazioni: CISSP (2022).
+Lingue: Inglese (Fluente), Mandarino.
