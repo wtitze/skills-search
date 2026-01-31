@@ -1,0 +1,56 @@
+﻿<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="15" fill="#fcfdfe"/>
+  <text x="600" y="40" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">FASE 2: RICERCA E RAGIONAMENTO AGENTICO</text>
+
+  <!-- Moduli -->
+  <rect x="50" y="150" width="220" height="400" rx="10" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="160" y="190" font-family="Arial" font-size="16" font-weight="bold" fill="#064e3b" text-anchor="middle">STREAMLIT UI</text>
+
+  <rect x="400" y="150" width="300" height="400" rx="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="550" y="190" font-family="Arial" font-size="16" font-weight="bold" fill="#1e40af" text-anchor="middle">AGENTE IA (Ollama)</text>
+  <text x="550" y="210" font-family="Arial" font-size="10" fill="#1e40af" text-anchor="middle">Modello: Llama 3.1 8B</text>
+
+  <rect x="850" y="100" width="250" height="110" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="975" y="130" font-family="Arial" font-size="14" font-weight="bold" fill="#991b1b" text-anchor="middle">POSTGRESQL</text>
+
+  <rect x="850" y="250" width="250" height="110" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+  <text x="975" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">QDRANT (Vector)</text>
+
+  <rect x="850" y="400" width="250" height="110" rx="10" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <text x="975" y="430" font-family="Arial" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">REDIS</text>
+
+  <!-- FLUSSO MESSAGGI -->
+  
+  <!-- 1. Expansion -->
+  <path d="M270 240 H400" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="335" y="230" font-family="Courier New" font-size="10" fill="#1e40af" text-anchor="middle">llm.invoke(Expansion)</text>
+  <path d="M400 270 H270" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow-blue)"/>
+  <text x="335" y="285" font-family="Courier New" font-size="10" fill="#1e40af" text-anchor="middle">Termini tecnici</text>
+
+  <!-- 2. Search -->
+  <path d="M270 320 H850" stroke="#c2410c" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <text x="550" y="310" font-family="Courier New" font-size="11" fill="#c2410c" text-anchor="middle" font-weight="bold">vector_store.similarity_search(query, k=8)</text>
+  <path d="M850 350 H270" stroke="#c2410c" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow-orange)"/>
+  <text x="550" y="365" font-family="Courier New" font-size="11" fill="#c2410c" text-anchor="middle">Documenti + Metadati (owner_name, file_path)</text>
+
+  <!-- 3. History -->
+  <path d="M270 410 H850" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="550" y="400" font-family="Courier New" font-size="11" fill="#991b1b" text-anchor="middle">redis.lpush(history) / lrange()</text>
+
+  <!-- 4. Reasoning & Stream -->
+  <path d="M270 480 H400" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="335" y="470" font-family="Courier New" font-size="10" fill="#1e40af" text-anchor="middle">llm.stream(Prompt)</text>
+  <path d="M400 520 H270" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="335" y="535" font-family="Courier New" font-size="10" fill="#1e40af" text-anchor="middle">Risposta (Tokens)</text>
+
+  <!-- 5. Metadata SQL (Internal Logic) -->
+  <path d="M270 170 H850" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow-black)"/>
+  <text x="550" y="165" font-family="Courier New" font-size="11" fill="#334155" text-anchor="middle">cur.execute("SELECT id, nome FROM users")</text>
+
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/></marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c"/></marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+    <marker id="arrow-black" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker>
+  </defs>
+</svg>

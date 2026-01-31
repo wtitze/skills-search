@@ -1,21 +1,22 @@
-﻿# Python
+﻿# Ambienti virtuali
 venv/
-__pycache__/
-*.pyc
+.venv/
+env/
 
-# Database e dati persistenti
+# Database Docker (volumi locali)
 postgres_data/
 qdrant_data/
+
+# File caricati e materiale di test
+uploads/
+test_material/
 data/
 
-# File caricati a runtime
-uploads/
-
-# Ambiente
-.env
-
-# IDE / OS
-.vscode/
-.idea/
+# Python cache e file temporanei
+__pycache__/
+*.py[cod]
+*$py.class
 .DS_Store
-Thumbs.db
+
+# Streamlit
+.streamlit/
