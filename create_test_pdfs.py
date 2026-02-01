@@ -1,80 +1,79 @@
 ﻿from fpdf import FPDF
 import os
 
-# Creazione cartella di output
+# Forza la creazione della cartella
 os.makedirs("test_material", exist_ok=True)
 
-def create_pdf(filename, content, title="Documento Tecnico"):
-    pdf = FPDF()
+def create_pro_pdf(filename, content, title):
+    # Inizializzazione moderna
+    pdf = FPDF(orientation="P", unit="mm", format="A4")
+    pdf.set_margins(20, 20, 20)
     pdf.add_page()
-    # Usiamo Helvetica (font standard) per evitare DeprecationWarning
-    pdf.set_font("Helvetica", "B", 16)
-    pdf.cell(190, 10, title, ln=True, align='C')
+    
+    # Intestazione Standard
+    pdf.set_font("helvetica", "B", 10)
+    pdf.set_text_color(150, 150, 150)
+    pdf.cell(0, 10, "DOCUMENTO AZIENDALE RISERVATO", new_x="LMARGIN", new_y="NEXT", align="C")
+    
+    # Titolo principale
+    pdf.ln(5)
+    pdf.set_font("helvetica", "B", 18)
+    pdf.set_text_color(30, 41, 59)
+    pdf.cell(0, 15, title.upper(), new_x="LMARGIN", new_y="NEXT", align="L")
+    
+    # Linea estetica
+    pdf.set_draw_color(30, 41, 59)
+    pdf.line(20, pdf.get_y(), 190, pdf.get_y())
     pdf.ln(10)
     
-    pdf.set_font("Helvetica", size=12)
-    # Definiamo una larghezza fissa (190mm) per evitare errori di calcolo spazio
-    for line in content.split('\n'):
-        if line.strip():
-            pdf.multi_cell(190, 8, line)
-        else:
-            pdf.ln(4)
+    # Corpo del testo (GESTIONE AUTOMATICA)
+    pdf.set_font("helvetica", "", 12)
+    pdf.set_text_color(0, 0, 0)
+    
+    # Passiamo l'intero blocco di testo a multi_cell: pensa lui a tutto
+    # w=0 significa "usa tutta la larghezza tra i margini"
+    pdf.multi_cell(w=0, h=8, text=content, align="L")
             
     pdf.output(f"test_material/{filename}")
 
-# --- 1. GENERAZIONE 15 CV ---
+# --- DATASET ---
 sedi = {
     "Milano": [
-        ("Marco Rossi", "Senior Frontend Developer. Esperto React e Next.js."),
-        ("Luca Bianchi", "Backend Engineer. Specialista Node.js e microservizi."),
+        ("Marco Rossi", "Senior Frontend Developer. Esperto React e Next.js. 8 anni di esperienza."),
+        ("Luca Bianchi", "Backend Engineer. Specialista Node.js, microservizi e Docker."),
         ("Giulia Verdi", "Android Developer. Esperta Kotlin e Jetpack Compose."),
         ("Alessandro Neri", "iOS Developer. Esperto Swift e SwiftUI."),
         ("Sofia Russo", "Penetration Tester. Esperta Kali Linux e Metasploit.")
     ],
     "Singapore": [
-        ("Chen Wei", "Frontend Specialist. Esperto Angular."),
+        ("Chen Wei", "Frontend Specialist. Esperto Angular e RxJS."),
         ("Siti Aminah", "Python Backend Developer. Esperta Django e AI Integration."),
-        ("Arjun Mehta", "Mobile Cross-Platform. Esperto Flutter."),
+        ("Arjun Mehta", "Mobile Cross-Platform. Esperto Flutter e Dart."),
         ("Li Na", "Senior iOS Engineer. Esperta Swift e sicurezza bancaria."),
         ("Kevin Tan", "Cybersecurity Analyst. Esperto AWS e SIEM.")
     ],
     "New York": [
-        ("John Smith", "Fullstack Developer. Esperto React e Go."),
+        ("John Smith", "Fullstack Developer. Esperto React e linguaggio Go."),
         ("Sarah Johnson", "Java Backend Expert. Esperta Spring Boot e Kafka."),
-        ("Michael Brown", "Android Lead. Esperto Firebase."),
+        ("Michael Brown", "Android Lead. Esperto Firebase e Studio."),
         ("Emily Davis", "Mobile Architect. Esperta React Native."),
         ("Robert Wilson", "Cloud Security. Esperto Azure Security ed audit Microsoft.")
     ]
 }
 
+# Generazione 15 CV
 for sede, persone in sedi.items():
     for nome, desc in persone:
-        filename = f"cv_{sede.lower()}_{nome.replace(' ', '_').lower()}.pdf"
-        create_pdf(filename, f"NOME COMPLETO: {nome}\nSEDE DI LAVORO: {sede}\n\nPROFILO PROFESSIONALE:\n{desc}", title=f"Curriculum Vitae - {nome}")
+        f_name = f"cv_{sede.lower().replace(' ', '_')}_{nome.lower().replace(' ', '_')}.pdf"
+        body = f"DIPENDENTE: {nome}\nSEDE: {sede}\n\nPROFILO PROFESSIONALE:\n{desc}"
+        create_pro_pdf(f_name, body, "Curriculum Vitae")
 
-# --- 2. PRESENTAZIONE TECNICA (Senza nome di Marco Rossi nel testo) ---
-pqc_content = """ANALISI DEI SISTEMI DI CONTROLLO SATELLITARE LEO
+# Generazione Documento Tecnico
+sat_text = "ARGOMENTO: SISTEMI SATELLITARI LEO\nAUTORE: Marco Rossi\n\nCONTENUTI:\n- Analisi telemetria satellitare.\n- Protocolli Ka-Band.\n- Algoritmi AI per droni e satelliti."
+create_pro_pdf("presentazione_satelliti.pdf", sat_text, "Ricerca Tecnica")
 
-Slide 1: Introduzione
-Gestione della telemetria in tempo reale per costellazioni di microsatelliti.
+# Generazione Certificato
+cert_text = "CERTIFICAZIONE PROFESSIONALE\n\nSi attesta che SARAH JOHNSON ha completato il corso:\nBLOCKCHAIN ARCHITECT - HYPERLEDGER FABRIC.\nData rilascio: Dicembre 2024."
+create_pro_pdf("certificato_blockchain.pdf", cert_text, "Certificato Tecnico")
 
-Slide 2: Comunicazioni Ka-Band
-Integrazione di protocolli di correzione d'errore (Forward Error Correction).
-
-Slide 3: Prevenzione Collisioni
-Algoritmi di intelligenza artificiale per il calcolo delle traiettorie di evasione detriti spaziali."""
-
-create_pdf("presentazione_satelliti.pdf", pqc_content, title="Ricerca Interna: Sistemi Satellitari")
-
-# --- 3. CERTIFICATO TECNICO (Per Sarah Johnson) ---
-cert_content = """ATTESTATO DI COMPETENZA PROFESSIONALE
-
-Si certifica che la dipendente SARAH JOHNSON ha completato con successo il percorso formativo avanzato in:
-ARCHITETTURE BLOCKCHAIN AZIENDALI (Hyperledger Fabric)
-
-Data: 15 Dicembre 2024
-Valutazione: Eccellente"""
-
-create_pdf("certificato_blockchain_johnson.pdf", cert_content, title="Certificazione Tecnica")
-
-print("SUCCESSO: 17 file PDF generati correttamente in 'test_material/'")
+print("17 PDF generati con successo in 'test_material/' senza errori di formattazione.")

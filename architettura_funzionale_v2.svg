@@ -1,0 +1,102 @@
+﻿<svg width="1200" height="1000" viewBox="0 0 1200 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sfondo -->
+  <rect width="1200" height="1000" rx="20" fill="#f8fafc"/>
+  
+  <!-- TITOLO -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b" text-anchor="middle">ARCHITETTURA FUNZIONALE: DOUBLE-TRACK &amp; MULTI-TOOL AGENT</text>
+  <line x1="100" y1="60" x2="1100" y2="60" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- BOX UTENTE (Sorgente unica) -->
+  <rect x="50" y="380" width="200" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">UTENTE / HR</text>
+  <rect x="70" y="440" width="160" height="70" rx="5" fill="#f1f5f9"/>
+  <text x="150" y="465" font-family="Arial, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Upload Documenti</text>
+  <text x="150" y="485" font-family="Arial, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Ricerca Competenze</text>
+
+  <!-- SEZIONE 1: INGESTION (ALTO) -->
+  <rect x="350" y="80" width="450" height="380" rx="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="575" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e40af" text-anchor="middle">SISTEMA DI INGESTION AUTOMATICA</text>
+
+  <!-- Binario A -->
+  <rect x="380" y="140" width="390" height="90" rx="10" fill="white" stroke="#3b82f6"/>
+  <text x="395" y="165" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">BINARIO A: TAG EXTRACTION (LLM)</text>
+  <text x="395" y="185" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Estrae competenze e certificazioni come dati strutturati.</text>
+  <text x="395" y="205" font-family="Arial, sans-serif" font-size="10" fill="#1e40af" font-style="italic">Esempio: "Python", "Azure Cert", "Milano"</text>
+
+  <!-- Binario B -->
+  <rect x="380" y="250" width="390" height="90" rx="10" fill="white" stroke="#3b82f6"/>
+  <text x="395" y="275" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">BINARIO B: SEMANTIC TRACK (Embedding)</text>
+  <text x="395" y="295" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Trasforma il testo integrale in vettori matematici.</text>
+  <text x="395" y="315" font-family="Arial, sans-serif" font-size="10" fill="#1e40af" font-style="italic">Modello: all-MiniLM-L6-v2</text>
+
+  <!-- SEZIONE 2: STORAGE (DESTRA) -->
+  <rect x="920" y="140" width="230" height="150" rx="10" fill="#1e3a8a"/>
+  <text x="1035" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">POSTGRESQL (SQL)</text>
+  <text x="1035" y="205" font-family="Arial, sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Skill Tags &amp; Anagrafica</text>
+  <rect x="940" y="225" width="190" height="40" rx="5" fill="#1d4ed8"/>
+  <text x="1035" y="250" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Dati Certi e Filtrabili</text>
+
+  <rect x="920" y="700" width="230" height="150" rx="10" fill="#1d4ed8"/>
+  <text x="1035" y="735" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">QDRANT (Vector)</text>
+  <text x="1035" y="765" font-family="Arial, sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Conoscenza Profonda</text>
+  <rect x="940" y="785" width="190" height="40" rx="5" fill="#3b82f6"/>
+  <text x="1035" y="810" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Ricerca Concettuale</text>
+
+  <!-- SEZIONE 3: AGENTE E TOOLS (BASSO) -->
+  <rect x="350" y="520" width="450" height="420" rx="20" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+  <text x="575" y="555" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#064e3b" text-anchor="middle">AGENTE ORCHESTRATORE (Llama 3.1)</text>
+
+  <!-- Router -->
+  <rect x="380" y="580" width="390" height="70" rx="10" fill="white" stroke="#10b981"/>
+  <text x="575" y="610" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#065f46" text-anchor="middle">INTELLIGENT ROUTER &amp; PLANNER</text>
+  <text x="575" y="630" font-family="Arial, sans-serif" font-size="10" fill="#334155" text-anchor="middle">Analizza query: "Dato strutturato o semantico?"</text>
+
+  <!-- Tool SQL -->
+  <rect x="380" y="670" width="390" height="100" rx="10" fill="#ecfdf5" stroke="#10b981"/>
+  <text x="395" y="695" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#065f46">TOOL A: SQL EXECUTOR</text>
+  <text x="395" y="715" font-family="Arial, sans-serif" font-size="10" fill="#334155">Interroga tag e sedi in Postgres.</text>
+  <text x="395" y="735" font-family="Arial, sans-serif" font-size="10" fill="#047857" font-style="italic">Risposta deterministica (es: "Chi sa Python?")</text>
+
+  <!-- Tool Vector -->
+  <rect x="380" y="790" width="390" height="100" rx="10" fill="#ecfdf5" stroke="#10b981"/>
+  <text x="395" y="815" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#065f46">TOOL B: VECTOR RETRIEVER</text>
+  <text x="395" y="835" font-family="Arial, sans-serif" font-size="10" fill="#334155">Cerca concetti e affinità in Qdrant.</text>
+  <text x="395" y="855" font-family="Arial, sans-serif" font-size="10" fill="#047857" font-style="italic">Risposta semantica (es: "Esperti di satelliti")</text>
+
+  <!-- FRECCE FLUSSO INGESTION -->
+  <!-- User -> Ingestion -->
+  <path d="M250 420 Q 300 420 300 200 H 370" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M250 440 Q 320 440 320 300 H 370" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="270" y="190" font-family="Arial" font-size="10" fill="#1e40af" font-weight="bold">Ingestion A</text>
+  <text x="270" y="325" font-family="Arial" font-size="10" fill="#1e40af" font-weight="bold">Ingestion B</text>
+
+  <!-- Ingestion -> Storage -->
+  <path d="M770 185 H 910" stroke="#1e3a8a" stroke-width="2" marker-end="url(#arrow-sql)"/>
+  <path d="M770 300 Q 850 300 850 775 H 910" stroke="#1d4ed8" stroke-width="2" fill="none" marker-end="url(#arrow-vector)"/>
+
+  <!-- FRECCE FLUSSO RICERCA -->
+  <!-- User -> Search -->
+  <path d="M150 530 V 615 H 370" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="160" y="580" font-family="Arial" font-size="10" fill="#047857" font-weight="bold">Query Ricerca</text>
+
+  <!-- Router -> Tools -->
+  <path d="M575 650 V 665" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <path d="M575 770 V 785" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- Tools <-> Storage (Bidirezionali) -->
+  <!-- SQL Tool <-> Postgres -->
+  <path d="M770 710 H 1035 V 295" stroke="#1e3a8a" stroke-width="2" fill="none" marker-end="url(#arrow-sql)" stroke-dasharray="4 2"/>
+  <text x="850" y="695" font-family="Arial" font-size="9" fill="#1e3a8a">Query SQL / Risultati</text>
+
+  <!-- Vector Tool <-> Qdrant -->
+  <path d="M770 840 H 910" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow-vector)" stroke-dasharray="4 2"/>
+  <text x="840" y="830" font-family="Arial" font-size="9" fill="#1d4ed8">Search / Matches</text>
+
+  <!-- DEFINIZIONI -->
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/></marker>
+    <marker id="arrow-sql" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e3a8a"/></marker>
+    <marker id="arrow-vector" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/></marker>
+  </defs>
+</svg>
